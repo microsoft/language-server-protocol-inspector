@@ -4,7 +4,7 @@
     <ul>
       <li>Visualize lengthy LSP logs so it's easier to understand the communication between Language Server/Client</li>
       <li>Expand messages to look deeper into the parameters</li>
-      <li>Filter the messages by area, type, message name or message parameters</li>
+      <li>Filter the messages by area, type or message name</li>
     </ul>
 
     <h3>Usage</h3>
@@ -13,6 +13,7 @@
     an example of loading CSS language server traces:
     <ul>
       <li>In VS Code, set `css.trace.server: "verbose"`</li>
+      <li>Open a CSS file, and do some edits, formatting, hovering to trigger language features.</li>
       <li>Go to Output -> CSS Language Server. Select all output and save them into a log file css.log.</li>
       <li>In the inspector, use the file picker to load the log file.</li>
     </ul>
