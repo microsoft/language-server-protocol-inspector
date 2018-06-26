@@ -1,4 +1,11 @@
-# Language Server Protocol Inspector
+<p>
+  <h2 align="center">Language Server Protocol Inspector</h2>
+</p>
+<p align="center">
+  <a href="https://travis-ci.org/Microsoft/language-server-protocol-inspector.svg?branch=master">
+    <img src="https://travis-ci.org/Microsoft/language-server-protocol-inspector.svg?branch=master">
+  </a>
+</p>
 
 Try it at https://microsoft.github.io/language-server-protocol/inspector/.
 
@@ -27,7 +34,6 @@ This inspector visualizes the logs to make it easy to understand the communicati
 
 - `yarn`
 - `yarn serve`
-
 
 ## License
 
