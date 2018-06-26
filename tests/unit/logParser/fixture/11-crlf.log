@@ -1,0 +1,14 @@
+[Trace - 15:31:35] Received notification 'loadingBar'.
+Params: {
+    "value": "Loading project...",
+    "enable": true
+}
+
+
+[Trace - 15:31:35] Received notification 'loadingBar'.
+Params: {
+    "value": "",
+    "enable": false
+}
+
+

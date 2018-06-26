@@ -1,14 +1,29 @@
+# Language Server Protocol Inspector
 
-# Contributing
+Try it at https://microsoft.github.io/language-server-protocol/inspector/.
 
-This project welcomes contributions and suggestions.  Most contributions require you to agree to a
-Contributor License Agreement (CLA) declaring that you have the right to, and actually do, grant us
-the rights to use your contribution. For details, visit https://cla.microsoft.com.
+## Motivation
 
-When you submit a pull request, a CLA-bot will automatically determine whether you need to provide
-a CLA and decorate the PR appropriately (e.g., label, comment). Simply follow the instructions
-provided by the bot. You will only need to do this once across all repos using our CLA.
+When you are using [vscode-languageserver-node](https://github.com/Microsoft/vscode-languageserver-node) to develop a language server, it's possible to specify a setting `"[langId]".trace.server: "verbose"` to make the Language Client log the LSP communication. This log is useful for developing and testing the Language Server, but the log can be lengthy — 5 seconds of usage might generate 5000 lines LSP log. This makes it hard to gain insight from the logs.
 
-This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/).
-For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or
-contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
+This inspector visualizes the logs to make it easy to understand the communication between the Language Client / Server. It also lets you filter down the logs by search query or language features, so you can quickly identify the logs you are interested in.
+
+![lsp-inspector](https://user-images.githubusercontent.com/4033249/41323525-ba73697a-6e63-11e8-92a3-c655b34126f6.gif)
+
+## Usage
+
+- A log file (log from html Language Server) is loaded by default.
+- Click each LSP item to expand its parameters.
+- Type a query into the search bar to filter the logs.
+- Select a language feature area to filter the logs.
+- Collect your own logs and inspect them! For example:
+  - Set `css.trace.server: "verbose"` in VS Code.
+  - Open a CSS file.
+  - Copy everything inside `CSS Language Server` channel into a log file `css.log`.
+  - Load it from the web app.
+- You can try it on real-world logs file at `/tests/unit/logParser/fixture`.
+
+## Running & Developing
+
+- `yarn`
+- `yarn serve`
