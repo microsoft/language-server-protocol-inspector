@@ -27,3 +27,10 @@ This inspector visualizes the logs to make it easy to understand the communicati
 
 - `yarn`
 - `yarn serve`
+
+
+## License
+
+Copyright (c) Microsoft Corporation. All rights reserved.
+
+Licensed under the [MIT](LICENSE) License.
