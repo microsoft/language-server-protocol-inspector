@@ -82,7 +82,9 @@ function itemMatchesFilter(item: LspItem, filter: Filter) {
       return item.msgType === 'textDocument/publishDiagnostics'
     case 'l':
       return (
-        item.msgType.startsWith('textDocument') && textSyncMsgTypes.indexOf(item.msgType) === -1
+        item.msgType.startsWith('textDocument') &&
+        textSyncMsgTypes.indexOf(item.msgType) === -1 &&
+        item.msgType !== 'textDocument/publishDiagnostics'
       )
   }
 }
