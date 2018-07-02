@@ -23,8 +23,8 @@ export default Vue.extend({
 
 <style>
 .search-box {
-  margin-bottom: 40px;
-  display: inline-block;
+  margin-bottom: 24px;
+  display: block;
   position: relative;
   margin-right: 0.5rem;
 }

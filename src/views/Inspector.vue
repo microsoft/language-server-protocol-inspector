@@ -1,8 +1,9 @@
 <template>
   <div class="inspector">
-    <file-picker></file-picker>
+    <!-- <file-picker></file-picker>
     <filter-bar></filter-bar>
-    <search-bar></search-bar>
+    <search-bar></search-bar> -->
+    <side-bar></side-bar>
     <message-list></message-list>
   </div>
 </template>
@@ -14,6 +15,7 @@ import FilePicker from '@/components/FilePicker.vue'
 import FilterBar from '@/components/FilterBar.vue'
 import SearchBar from '@/components/SearchBar.vue'
 import MessageList from '@/components/MessageList.vue'
+import SideBar from '@/components/SideBar.vue'
 
 export default Vue.extend({
   name: 'inspector',
@@ -22,7 +24,8 @@ export default Vue.extend({
     FilePicker,
     MessageList,
     FilterBar,
-    SearchBar
+    SearchBar,
+    SideBar
   }
 })
 </script>
@@ -30,5 +33,8 @@ export default Vue.extend({
 <style>
 .inspector {
   margin-bottom: 60px;
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
 }
 </style>

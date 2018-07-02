@@ -1,10 +1,10 @@
 <template>
   <div id="app">
-    <h1>LSP Inspector</h1>
-    <div id="nav">
+    <!-- <h1>LSP Inspector</h1> -->
+    <!-- <div id="nav">
       <router-link to="/language-server-protocol/inspector/">Usage</router-link> | 
       <router-link to="/language-server-protocol/inspector/app">App</router-link>
-    </div>
+    </div> -->
     <router-view/>
   </div>
 </template>
