@@ -8,12 +8,7 @@ Vue.use(Router)
 export default new Router({
   routes: [
     {
-      path: '/language-server-protocol/inspector/',
-      name: 'Home',
-      component: Usage
-    },
-    {
-      path: '/language-server-protocol/inspector/app',
+      path: '/language-server-protocol/inspector',
       name: 'Home',
       component: Inspector
     }
