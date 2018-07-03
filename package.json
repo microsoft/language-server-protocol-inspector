@@ -10,9 +10,6 @@
     "test:e2e": "vue-cli-service test:e2e",
     "format": "prettier --config .prettierrc --write {src,tests}/**/*.{vue,js,ts,json}"
   },
-  "gitHooks": {
-    "pre-commit": "yarn format"
-  },
   "dependencies": {
     "@fortawesome/fontawesome": "^1.1.8",
     "@fortawesome/fontawesome-free-solid": "^5.0.13",
@@ -35,8 +32,7 @@
     "prettier": "^1.13.6",
     "sass-loader": "^7.0.1",
     "ts-jest": "^22.4.6",
-    "vue-template-compiler": "^2.5.16",
-    "yorkie": "^1.0.3"
+    "vue-template-compiler": "^2.5.16"
   },
   "browserslist": [
     "> 1%",
