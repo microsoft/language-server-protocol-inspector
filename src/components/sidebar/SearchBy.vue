@@ -1,6 +1,12 @@
 <template>
   <div class="search-box">
-    <input v-model="query" autocomplete="off" spellcheck="false">
+    <h2>Search By</h2>
+    <div class="search-box">
+      <input v-model="queryName" autocomplete="off" spellcheck="false" placeholder="Message Name">
+    </div>
+    <div class="search-box">
+      <input v-model="queryParam" autocomplete="off" spellcheck="false" placeholder="Message Parameters">
+    </div>
   </div>
 </template>
 
@@ -9,7 +15,15 @@ import Vue from 'vue'
 
 export default Vue.extend({
   computed: {
-    query: {
+    queryName: {
+      get() {
+        return this.$store.state.query
+      },
+      set(value) {
+        this.$store.commit('search', value)
+      }
+    },
+    queryParam: {
       get() {
         return this.$store.state.query
       },
@@ -34,7 +48,7 @@ export default Vue.extend({
   color: #4e6e8e;
   display: inline-block;
   border: 1px solid #cfd4db;
-  border-radius: 2rem;
+  border-radius: 4px;
   font-size: 0.9rem;
   line-height: 2rem;
   padding: 0 0.5rem 0 2rem;

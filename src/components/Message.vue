@@ -79,7 +79,9 @@ export default Vue.extend({
 })
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+@import '@/scss/global.scss';
+
 .msg {
   font-family: 'Input Mono', Menlo, Monaco, 'Courier New', monospace;
   font-size: 13px;
@@ -124,7 +126,7 @@ export default Vue.extend({
  */
 
 .msg {
-  transition: background-color 0.1s ease-in;
+  @include transition(background-color);
 }
 .msg:hover {
   background-color: rgba(221, 221, 221, 0.3);

@@ -24,13 +24,15 @@ export default Vue.extend({
 })
 </script>
 
-<style>
+<style lang="scss">
+@import '@/scss/global.scss';
+
 .filter-bar {
   margin-bottom: 24px;
   font-family: 'Input Mono', Menlo, Monaco, 'Courier New', monospace;
 }
 .filter-bar span {
-  transition: color 0.1s ease-in;
+  @include transition(color);
 }
 .filter-bar .active {
   color: #3eaf7c;

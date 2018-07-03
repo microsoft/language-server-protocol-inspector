@@ -1,0 +1,12 @@
+/**
+ * Var
+ */
+
+$active-bg: #6f92ba88;
+
+/**
+ * Mixin
+ */
+@mixin transition($property) {
+  transition: $property .4s ease-in;
+}

@@ -6,10 +6,9 @@ import store from '@/store'
 Vue.config.productionTip = false
 
 import fontawesome from '@fortawesome/fontawesome'
-import faComment from '@fortawesome/fontawesome-free-solid/faComment'
-import faCommentAlt from '@fortawesome/fontawesome-free-solid/faCommentAlt'
+import { faFile, faUpload, faComment, faCommentAlt } from '@fortawesome/fontawesome-free-solid'
 
-fontawesome.library.add(faComment, faCommentAlt)
+fontawesome.library.add(faFile, faUpload, faComment, faCommentAlt)
 
 new Vue({
   router,
