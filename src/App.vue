@@ -46,12 +46,10 @@ h1, h2, h3, h4 {
   font-family: 'Open Sans', 'Avenir Next', 'Avenir', Helvetica, Arial, sans-serif;
   text-align: center;
   color: $text-fg;
-}
-
-body {
   margin-left: 20px;
   margin-right: 20px;
 }
+
 .inspector {
   margin-top: 10px;
 }
