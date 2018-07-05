@@ -83,8 +83,8 @@ export default Vue.extend({
 @import '@/scss/global.scss';
 
 .msg {
-  font-family: 'Input Mono', Menlo, Monaco, 'Courier New', monospace;
-  font-size: 13px;
+  font-family: $monospace;
+  font-size: 14px;
   border: 1px solid #ddd;
   border-radius: 4px;
   margin-bottom: 20px;
@@ -92,7 +92,7 @@ export default Vue.extend({
 }
 .msg-timestamp {
   color: #e8a1a1;
-  font-size: 10px;
+  font-size: 12px;
 }
 
 .send-request,

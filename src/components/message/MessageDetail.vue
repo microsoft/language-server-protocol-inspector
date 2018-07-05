@@ -18,19 +18,22 @@ export default Vue.extend({
   props: ['item'],
   computed: {
     msgLink() {
+      const hash = this.item.msgType.split('/').join('_')
       return `https://microsoft.github.io/language-server-protocol/specification#${
-        this.item.msgType
+        hash
       }`
     }
   }
 })
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
+@import '@/scss/global.scss';
+
 .msg-detail {
   border: 1px solid #eee;
   padding: 20px;
-  font-size: 12px;
+  font-size: 14px;
   text-align: left;
 
   b a {
@@ -52,8 +55,8 @@ pre {
 }
 code {
   white-space: pre-wrap;
-  font-family: 'Input Mono', Menlo, Monaco, 'Courier New', monospace !important;
-  font-size: 12px;
+  font-family: $monospace;
+  font-size: 14px;
   border-radius: 2px;
   padding: 0.2rem 0.3rem;
 }

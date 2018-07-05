@@ -30,3 +30,9 @@ export default Vue.extend({
   }
 })
 </script>
+
+<style lang="scss" scoped>
+.inspector {
+  margin-top: 10px;
+}
+</style>

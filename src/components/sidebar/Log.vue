@@ -14,10 +14,10 @@ export default Vue.extend({
   },
   props: ['index'],
   computed: {
-    name () {
+    name() {
       return this.$store.state.logs[this.index].name
     },
-    isActive () {
+    isActive() {
       return this.index === this.$store.state.activeLogIndex
     }
   },

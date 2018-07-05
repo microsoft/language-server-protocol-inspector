@@ -52,6 +52,11 @@ export default {
 
 .title {
   margin-left: 30px;
+
+  h2 {
+    margin-top: 16px;
+    margin-bottom: 16px;
+  }
 }
 
 .tabs {
