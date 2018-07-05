@@ -4,8 +4,11 @@
       <span>Client</span>
       <span>Server</span>
     </div>
-    <div class="msg-list">
+    <div class="msg-list" v-if="!isEmpty">
       <message v-for="(item, i) in this.log" :key="i" :item="item"></message>
+    </div>
+    <div class="msg-list" v-else>
+      <h2>No Matching Message</h2>
     </div>
   </div>
 </template>
@@ -19,6 +22,9 @@ export default Vue.extend({
     Message
   },
   computed: {
+    isEmpty() {
+      return this.log.length === 0
+    },
     log() {
       return this.$store.getters.shownItems
     }
