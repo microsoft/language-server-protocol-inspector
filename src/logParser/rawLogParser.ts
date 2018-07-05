@@ -89,6 +89,7 @@ function extractMsg(msg: string) {
   const reRecvResponse = /Received response '(.*) - \((\d+)\)' in (\d+ms)/
 
   let msgType, msgId, msgLatency
+  /* tslint:disable */
   if (msgKind === 'send-notification') {
     ;[msgType] = reSendNotification.exec(msg).slice(1)
   } else if (msgKind === 'recv-notification') {
@@ -104,6 +105,7 @@ function extractMsg(msg: string) {
   } else {
     return null
   }
+  /* tslint:enable */
 
   return {
     msgKind,

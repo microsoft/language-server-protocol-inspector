@@ -2,7 +2,8 @@
   <div id="sidebar">
     <logs/>
     <search-by/>
-    <filter-by/>
+    <filter-by-category/>
+    <filter-by-kind/>
   </div>
 </template>
 
@@ -10,13 +11,15 @@
 import Vue from 'vue'
 import Logs from '@/components/sidebar/Logs.vue'
 import SearchBy from '@/components/sidebar/SearchBy.vue'
-import FilterBy from '@/components/sidebar/FilterBy.vue'
+import FilterByCategory from '@/components/sidebar/filter/FilterByCategory.vue'
+import FilterByKind from '@/components/sidebar/filter/FilterByKind.vue'
 
 export default Vue.extend({
   components: {
     Logs,
     SearchBy,
-    FilterBy
+    FilterByCategory,
+    FilterByKind
   }
 })
 </script>

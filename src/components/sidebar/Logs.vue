@@ -1,24 +1,23 @@
 <template>
   <div>
     <h2>Logs</h2>
-    <div class="active">
-      <font-awesome-icon class="fa-icon" icon="file" /> sample.log
+    <div class="logs">
+      <log v-for="(log, i) in $store.state.logs" :key="i" :index="i"></log>
     </div>
-    <div class="filepicker">
-      <label for="file">
-        <font-awesome-icon class="fa-icon" icon="upload" /> Upload your log
-      </label>
-      <input type="file" id="file" @change="handleFiles">
-    </div>
+    <log-picker/>
   </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
+import Log from '@/components/sidebar/Log.vue'
+import LogPicker from '@/components/sidebar/LogPicker.vue'
 import FontAwesomeIcon from '@fortawesome/vue-fontawesome'
 
 export default Vue.extend({
   components: {
+    Log,
+    LogPicker,
     FontAwesomeIcon
   },
   methods: {
@@ -41,34 +40,9 @@ export default Vue.extend({
 h2 {
   margin-top: 0;
 }
-.active {
-  padding: 4px 10px;
-  background-color: $active-bg;
-}
-.filepicker {
-  margin-top: 4px;
-  label {
-    display: block;
-    padding: 4px 10px;
-    @include transition(background-color);
-  }
 
-  &:hover {
-    label {
-      background-color: $active-bg;
-    }
-  }
-}
-input {
-  width: 0.1px;
-  height: 0.1px;
-  opacity: 0;
-  overflow: hidden;
-  position: absolute;
-  z-index: -1;
-}
-.fa-icon {
-  width: 12px;
-  margin-right: 4px;
+.logs {
+  border-bottom: 1px solid $active-bg;
+  margin-bottom: 10px;
 }
 </style>

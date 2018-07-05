@@ -12,7 +12,7 @@
 
 <script lang="ts">
 import Vue from 'vue'
-import Message from '@/components/Message.vue'
+import Message from '@/components/message/Message.vue'
 
 export default Vue.extend({
   components: {
@@ -20,7 +20,7 @@ export default Vue.extend({
   },
   computed: {
     log() {
-      return this.$store.state.items
+      return this.$store.getters.shownItems
     }
   }
 })

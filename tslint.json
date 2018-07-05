@@ -1,12 +1,8 @@
 {
   "defaultSeverity": "warning",
-  "extends": [
-    "tslint:recommended"
-  ],
+  "extends": ["tslint:recommended"],
   "linterOptions": {
-    "exclude": [
-      "node_modules/**"
-    ]
+    "exclude": ["node_modules/**"]
   },
   "rules": {
     "quotemark": [true, "single"],
@@ -17,6 +13,10 @@
     "no-consecutive-blank-lines": false,
     "semicolon": false,
     "trailing-comma": false,
-    
+    "arrow-parens": false,
+    "one-variable-per-declaration": false,
+    "no-var-requires": false,
+    "no-empty": false,
+    "object-literal-key-quotes": false
   }
 }

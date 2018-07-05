@@ -31,7 +31,7 @@
 <script lang="ts">
 import Vue from 'vue'
 import FontAwesomeIcon from '@fortawesome/vue-fontawesome'
-import MessageDetail from '@/components/MessageDetail.vue'
+import MessageDetail from '@/components/message/MessageDetail.vue'
 
 export default Vue.extend({
   name: 'message',

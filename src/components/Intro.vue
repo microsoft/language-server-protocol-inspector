@@ -63,8 +63,12 @@ export default Vue.extend({
 <style>
 .intro {
   max-width: 640px;
+  margin-top: 4rem;
   margin-left: auto;
   margin-right: auto;
   text-align: left;
+}
+li {
+  margin-bottom: .4rem;
 }
 </style>

@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Usage from './views/Usage.vue'
+
+import App from '@/App.vue'
 
 Vue.use(Router)
 
@@ -8,7 +9,7 @@ export default new Router({
   routes: [
     {
       path: '/language-server-protocol/inspector',
-      name: 'Home'
+      component: App
     }
   ],
   mode: 'history'

@@ -2,10 +2,10 @@
   <div class="search-box">
     <h2>Search By</h2>
     <div class="search-box">
-      <input v-model="queryName" autocomplete="off" spellcheck="false" placeholder="Message Name">
+      <input v-model="nameQuery" autocomplete="off" spellcheck="false" placeholder="Message Name">
     </div>
     <div class="search-box">
-      <input v-model="queryParam" autocomplete="off" spellcheck="false" placeholder="Message Parameters">
+      <input v-model="paramQuery" autocomplete="off" spellcheck="false" placeholder="Message Parameters">
     </div>
   </div>
 </template>
@@ -15,27 +15,35 @@ import Vue from 'vue'
 
 export default Vue.extend({
   computed: {
-    queryName: {
+    nameQuery: {
       get() {
-        return this.$store.state.query
+        return this.$store.state.nameQuery
       },
       set(value) {
-        this.$store.commit('search', value)
+        this.$store.commit('search', {
+          nameQuery: value,
+          paramQuery: this.paramQuery
+        })
       }
     },
-    queryParam: {
+    paramQuery: {
       get() {
         return this.$store.state.query
       },
       set(value) {
-        this.$store.commit('search', value)
+        this.$store.commit('search', {
+          nameQuery: this.nameQuery,
+          paramQuery: value
+        })
       }
     }
   }
 })
 </script>
 
-<style>
+<style lang="scss">
+@import '@/scss/global.scss';
+
 .search-box {
   margin-bottom: 24px;
   display: block;
@@ -60,6 +68,6 @@ export default Vue.extend({
 }
 .search-box input:focus {
   cursor: auto;
-  border-color: #3eaf7c;
+  border-color: $active-bg;
 }
 </style>

@@ -2,11 +2,15 @@
  * Var
  */
 
-$active-bg: #6f92ba88;
+$text-fg: #2c3e50;
+
+$active-bg: #287fe3;
+$active-fg: #f0f0f0;
+$hover-bg: rgba(lighten($active-bg, 20%), .8);
 
 /**
  * Mixin
  */
 @mixin transition($property) {
-  transition: $property .4s ease-in;
+  transition: $property .15s ease-in;
 }
