@@ -127,12 +127,14 @@ export default Vue.extend({
  */
 
 .msg {
-  @include transition(background-color);
+  @include transition(all);
 }
 .msg:hover {
-  background-color: rgba(221, 221, 221, 0.3);
+  background-color: rgba(221, 221, 221, 0.7);
+  border-color: $active-bg;
 }
 .msg.current {
-  background-color: rgba(221, 221, 221, 0.3);
+  background-color: rgba(221, 221, 221, 0.7);
+  border-color: $active-bg;
 }
 </style>
