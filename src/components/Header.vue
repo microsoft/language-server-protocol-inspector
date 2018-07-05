@@ -8,6 +8,7 @@
       <div class="views">
         <div class="view app-view" :class="{ active: !$store.state.showUsage }" @click="hideUsage">App</div>
         <div class="view usage-view" :class="{ active: $store.state.showUsage }" @click="showUsage">Usage</div>
+        <div class="view"><a target="_blank" href="https://github.com/Microsoft/language-server-protocol-inspector">GitHub</a></div>
       </div>
     </div>
   </div>
@@ -28,6 +29,10 @@ export default {
 
 <style lang="scss" scoped>
 @import '@/scss/global.scss';
+
+a {
+  color: $text-fg;
+}
 
 .header {
   max-width: 1100px;
@@ -54,7 +59,6 @@ export default {
 }
 
 .title {
-
   h2 {
     margin-top: 16px;
     margin-bottom: 16px;
