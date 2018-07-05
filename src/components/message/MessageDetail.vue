@@ -34,7 +34,8 @@ export default Vue.extend({
   border: 1px solid #eee;
   max-width: 700px;
   padding: 20px;
-  font-size: 14px;
+  font-size: 13px;
+  font-family: $monospace;
   text-align: left;
 
   b a {
@@ -57,7 +58,6 @@ pre {
 code {
   white-space: pre-wrap;
   font-family: $monospace;
-  font-size: 14px;
   border-radius: 2px;
   padding: 0.2rem 0.3rem;
 }

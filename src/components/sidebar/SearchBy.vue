@@ -41,8 +41,13 @@ export default Vue.extend({
 })
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import '@/scss/global.scss';
+
+h2 {
+  margin-top: 1.5rem;
+  font-size: 1.5rem;
+}
 
 .search-box {
   margin-bottom: 24px;

@@ -25,3 +25,10 @@ export default Vue.extend({
   }
 })
 </script>
+
+<style lang="scss" scoped>
+h2 {
+  margin-top: 1.5rem;
+  font-size: 1.5rem;
+}
+</style>

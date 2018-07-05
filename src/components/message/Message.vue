@@ -84,8 +84,8 @@ export default Vue.extend({
 
 .msg {
   font-family: $monospace;
-  font-weight: bold;
-  font-size: 14px;
+  font-weight: 400;
+  font-size: 13px;
   border: 1px solid #ddd;
   border-radius: 4px;
   margin-bottom: 20px;
@@ -93,7 +93,7 @@ export default Vue.extend({
 }
 .msg-timestamp {
   color: #e8a1a1;
-  font-size: 12px;
+  font-size: 11px;
 }
 
 .send-request,
