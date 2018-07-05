@@ -18,7 +18,11 @@ export default Vue.extend({
       return this.category === this.$store.state.categoryFilter
     },
     displayCategory() {
-      return this.category[0].toUpperCase() + this.category.slice(1)
+      return this.category.split('-')
+        .map(frag => {
+          return frag[0].toUpperCase() + frag.slice(1)
+        })
+        .join(' ')
     }
   },
   methods: {
