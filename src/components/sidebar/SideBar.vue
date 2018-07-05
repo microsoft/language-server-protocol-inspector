@@ -30,7 +30,8 @@ h3 {
   margin-bottom: 10px;
 }
 #sidebar {
-  margin-right: 40px;
+  width: 250px;
+  margin-right: 50px;
   text-align: left;
   font-size: 14px;
 }

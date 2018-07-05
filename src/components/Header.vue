@@ -30,6 +30,9 @@ export default {
 @import '@/scss/global.scss';
 
 .header {
+  width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
   display: flex;
   flex-flow: row;
   justify-content: space-between;

@@ -52,7 +52,7 @@ export default Vue.extend({
 }
 .search-box input {
   cursor: text;
-  width: 10rem;
+  width: 100%;
   color: #4e6e8e;
   display: inline-block;
   border: 1px solid #cfd4db;

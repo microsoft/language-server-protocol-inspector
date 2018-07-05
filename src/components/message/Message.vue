@@ -84,6 +84,7 @@ export default Vue.extend({
 
 .msg {
   font-family: $monospace;
+  font-weight: bold;
   font-size: 14px;
   border: 1px solid #ddd;
   border-radius: 4px;
