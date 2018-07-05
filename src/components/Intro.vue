@@ -1,6 +1,8 @@
 <template>
   <div class="intro">
-    Welcome to LSP Inspector. Here you can:
+    <p>
+      Welcome to LSP Inspector. Here you can:
+    </p>
     <ul>
       <li>Visualize lengthy LSP logs so it's easier to understand the communication between Language Server/Client</li>
       <li>Expand messages to look deeper into the parameters</li>
@@ -8,18 +10,22 @@
     </ul>
 
     <h3>Usage</h3>
-    Language Servers implemented with <a href="https://github.com/Microsoft/vscode-languageserver-node">vscode-languageserver-node</a>
-    has an option `[langId].trace.server`. When you set it to `"verbose"`, logs will be printed to the `[langeId]` output channel. Here is
-    an example of loading CSS language server traces:
+    <p>
+      Language Servers implemented with <a href="https://github.com/Microsoft/vscode-languageserver-node">vscode-languageserver-node</a>
+      has an option `[langId].trace.server`. When you set it to `"verbose"`, logs will be printed to the `[langeId]` output channel. Here is
+      an example of loading CSS language server traces:
+    </p>
     <ul>
       <li>In VS Code, set `css.trace.server: "verbose"`</li>
-      <li>Open a CSS file, and do some edits, formatting, hovering to trigger language features.</li>
+      <li>Open a CSS file, do some edits, formatting, hovering to trigger language features.</li>
       <li>Go to Output -> CSS Language Server. Select all output and save them into a log file css.log.</li>
-      <li>In the inspector, use the file picker to load the log file.</li>
+      <li>Use the "Upload your log" button to load the log file.</li>
     </ul>
 
     <h3>Message Type</h3>
-    There are 6 types of message communications between the language client/server:
+    <p>
+      There are 6 types of message communications between the language client/server:
+    </p>
     <ul>
       <li>
         <font-awesome-icon class="fa-icon" icon="comment-alt" style="color: #bb9911de" />
@@ -60,13 +66,14 @@ export default Vue.extend({
 })
 </script>
 
-<style>
+<style lang="scss" scoped>
 .intro {
   max-width: 640px;
   margin-top: 4rem;
   margin-left: auto;
   margin-right: auto;
   text-align: left;
+  line-height: 1.5;
 }
 li {
   margin-bottom: .4rem;
