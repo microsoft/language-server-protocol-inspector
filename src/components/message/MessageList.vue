@@ -27,6 +27,8 @@ export default Vue.extend({
 </script>
 
 <style lang="scss">
+@import '@/scss/global.scss';
+
 .msg-header,
 .msg-list {
   margin-left: auto;
@@ -42,5 +44,10 @@ export default Vue.extend({
 .msg-list {
   display: flex;
   flex-flow: column;
+  height: calc(100vh - 250px);
+  padding-top: 20px;
+  overflow: scroll;
+  border-top: 2px solid $active-bg;
+  border-bottom: 2px solid $active-bg;
 }
 </style>
