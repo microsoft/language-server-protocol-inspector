@@ -41,6 +41,7 @@ export default Vue.extend({
 }
 .category {
   padding: 6px 10px;
+
   @include transition(background-color);
 
   &:hover {

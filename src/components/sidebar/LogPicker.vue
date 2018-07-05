@@ -42,6 +42,8 @@ export default Vue.extend({
   label {
     display: block;
     padding: 8px 10px;
+    cursor: pointer;
+
     @include transition(background-color);
 
     .fa-icon {

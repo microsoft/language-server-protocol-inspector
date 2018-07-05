@@ -45,5 +45,6 @@ h2 {
 .logs {
   border-bottom: 1px solid $active-bg;
   margin-bottom: 10px;
+  cursor: pointer;
 }
 </style>
