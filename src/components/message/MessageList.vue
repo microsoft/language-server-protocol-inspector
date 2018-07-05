@@ -29,7 +29,6 @@ export default Vue.extend({
 <style lang="scss">
 .msg-header,
 .msg-list {
-  width: 800px;
   margin-left: auto;
   margin-right: auto;
 }

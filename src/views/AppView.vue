@@ -1,7 +1,5 @@
 <template>
-  <div>
-    <message-list></message-list>
-  </div>
+  <message-list></message-list>
 </template>
 
 <script lang="ts">
@@ -19,26 +17,3 @@ export default Vue.extend({
   }
 })
 </script>
-
-<style src="normalize.css/normalize.css"></style>
-
-<style lang="scss">
-@import '@/scss/global.scss';
-
-h1, h2, h3, h4 {
-  font-weight: 500;
-}
-#app {
-  font-family: 'Open Sans', 'Avenir Next', 'Avenir', Helvetica, Arial, sans-serif;
-  text-align: center;
-  color: $text-fg;
-}
-
-.body {
-  margin-top: 20px;
-  margin-bottom: 60px;
-  display: flex;
-  flex-flow: row;
-  justify-content: center;
-}
-</style>

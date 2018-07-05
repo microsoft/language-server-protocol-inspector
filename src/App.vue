@@ -5,8 +5,10 @@
       
       <div class="body">
         <side-bar></side-bar>
-        <app-view v-if="!$store.state.showUsage"/>
-        <usage-view v-else/>
+        <div class="main">
+          <app-view v-if="!$store.state.showUsage"/>
+          <usage-view v-else/>
+        </div>
       </div>
     </div>
   </div>
@@ -31,8 +33,40 @@ export default Vue.extend({
 })
 </script>
 
-<style lang="scss" scoped>
+<style src="normalize.css/normalize.css"></style>
+
+<style lang="scss">
+@import '@/scss/global.scss';
+
+h1, h2, h3, h4 {
+  font-weight: 500;
+}
+
+#app {
+  font-family: 'Open Sans', 'Avenir Next', 'Avenir', Helvetica, Arial, sans-serif;
+  text-align: center;
+  color: $text-fg;
+}
+
+body {
+  margin-left: 20px;
+  margin-right: 20px;
+}
 .inspector {
   margin-top: 10px;
+}
+.body {
+  justify-content: center;
+  display: flex;
+  max-width: 1100px;
+
+  margin-top: 20px;
+  margin-bottom: 60px;
+
+  margin-left: auto;
+  margin-right: auto;
+}
+.main {
+  flex-grow: 2;
 }
 </style>
