@@ -44,7 +44,7 @@ export default Vue.extend({
 .msg-list {
   display: flex;
   flex-flow: column;
-  height: calc(100vh - 250px);
+  height: calc(100vh - 300px);
   padding-top: 20px;
   overflow: scroll;
   border-top: 2px solid $active-bg;
