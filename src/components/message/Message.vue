@@ -1,23 +1,23 @@
 <template>
   <span class="msg" :class="[{ current: isCurrent }, item.msgKind]" @mouseover="updateCurrent">
-    <div>
-      <span @click="toggleArg">
+    <div @click="toggleArg" class="msg-clickable-area">
+      <span>
         <font-awesome-icon class="fa-icon" icon="comment" v-if="item.msgKind === 'send-request'" />
         <font-awesome-icon class="fa-icon" icon="comment-alt" v-if="item.msgKind === 'send-notification'" />
         <font-awesome-icon class="fa-icon" icon="comment" v-if="item.msgKind === 'send-response'" />
       </span>
 
-      <span class="msg-type" v-if="isLeft" @click="toggleArg">
+      <span class="msg-type" v-if="isLeft">
         {{ item.msgType }}
       </span>
 
-      <span class="msg-timestamp" @click="toggleArg">{{ timestampOrLatency }}</span>
+      <span class="msg-timestamp">{{ timestampOrLatency }}</span>
 
-      <span class="msg-type" v-if="!isLeft" @click="toggleArg">
+      <span class="msg-type" v-if="!isLeft">
         {{ item.msgType }}
       </span>
 
-      <span @click="toggleArg">
+      <span>
         <font-awesome-icon class="fa-icon" icon="comment" transform="flip-h" v-if="item.msgKind === 'recv-response'" />
         <font-awesome-icon class="fa-icon" icon="comment-alt" tranform="flip-h" v-if="item.msgKind === 'recv-notification'" />
         <font-awesome-icon class="fa-icon" icon="comment" transform="flip-h" v-if="item.msgKind === 'recv-request'" />
@@ -136,5 +136,8 @@ export default Vue.extend({
 .msg.current {
   background-color: rgba(221, 221, 221, 0.5);
   border-color: $active-bg;
+}
+.msg-clickable-area {
+  cursor: pointer;
 }
 </style>
