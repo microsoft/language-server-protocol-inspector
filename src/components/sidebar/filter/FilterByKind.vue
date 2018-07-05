@@ -6,9 +6,9 @@
     <kind-filter :kind="'send-notification'"></kind-filter>
     <kind-filter :kind="'recv-notification'"></kind-filter>
     <kind-filter :kind="'send-request'"></kind-filter>
+    <kind-filter :kind="'recv-response'"></kind-filter>
     <kind-filter :kind="'recv-request'"></kind-filter>
     <kind-filter :kind="'send-response'"></kind-filter>
-    <kind-filter :kind="'recv-response'"></kind-filter>
 
   </div>
 </template>
