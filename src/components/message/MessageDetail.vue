@@ -5,7 +5,7 @@
         {{ this.item.msgType }}
       </a>
     </b>
-    <pre>
+    <pre ref="msg-body">
       <code>{{ JSON.stringify(item.arg, null, 2) }}</code>
     </pre>
   </div>
@@ -13,6 +13,7 @@
 
 <script lang="ts">
 import Vue from 'vue'
+import hljs from 'highlight.js'
 
 export default Vue.extend({
   props: ['item'],
@@ -23,6 +24,9 @@ export default Vue.extend({
         hash
       }`
     }
+  },
+  mounted() {
+    hljs.highlightBlock(this.$refs['msg-body'])
   }
 })
 </script>
