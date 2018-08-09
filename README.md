@@ -1,9 +1,10 @@
 <p>
   <h2 align="center">Language Server Protocol Inspector</h2>
 </p>
+
 <p align="center">
-  <a href="https://travis-ci.org/Microsoft/language-server-protocol-inspector.svg?branch=master">
-    <img src="https://travis-ci.org/Microsoft/language-server-protocol-inspector.svg?branch=master">
+  <a href="https://travis-ci.org/Microsoft/language-server-protocol-inspector">
+    <img src="https://img.shields.io/travis-ci/Microsoft/language-server-protocol-inspector.svg?style=flat-square">
   </a>
 </p>
 
