@@ -11,8 +11,8 @@ export interface LspItem {
   msg: string
   msgKind: MsgKind
   msgType: string
-  msgId: string
-  msgLatency: string
+  msgId?: string
+  msgLatency?: string
   arg: any
 }
 
