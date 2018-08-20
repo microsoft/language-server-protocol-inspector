@@ -227,4 +227,10 @@ function itemMatchesKindFilter(item: LspItem, filter: KindFilter) {
   store.commit('appendLog', log)
 }
 
+window.addEventListener('message', ev => {
+  store.commit('appendLog', ev.data)
+  const el = document.querySelector('.msg:last-child')
+  el.scrollIntoView({ block: 'start', behavior: 'smooth' })
+})
+
 export default store
