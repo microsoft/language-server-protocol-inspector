@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import { parseLSPLog, LspItem, MsgKind } from '@/logParser/rawLogParser'
+import { parseJSONLog } from '@/logParser/jsonLogParser';
 
 Vue.use(Vuex)
 
@@ -36,6 +37,11 @@ export interface State {
   showUsage: boolean
 }
 
+const emptyLog = {
+  name: 'stream',
+  items: []
+}
+
 const sampleLogItems: LspItem[] = require('./sample.log.json')
 const sampleLog = {
   name: 'sample.log',
@@ -49,7 +55,7 @@ const sampleCSSLog = {
 }
 
 const defaultState: State = {
-  logs: [sampleLog, sampleCSSLog],
+  logs: [emptyLog, sampleLog, sampleCSSLog],
   activeLogIndex: 0,
 
   nameQuery: '',
@@ -63,7 +69,7 @@ const defaultState: State = {
   showUsage: false
 }
 
-export default new Vuex.Store({
+const store = new Vuex.Store({
   state: defaultState,
   mutations: {
     updateActiveLog(state, i) {
@@ -74,6 +80,10 @@ export default new Vuex.Store({
         items: parseLSPLog(rawLog),
         name
       })
+    },
+    appendLog(state, logItem: string) {
+      const activeLog = state.logs[state.activeLogIndex]
+      activeLog.items.push(parseJSONLog(logItem))
     },
     search(state, { nameQuery, paramQuery }) {
       state.nameQuery = nameQuery
@@ -212,3 +222,15 @@ function itemMatchesKindFilter(item: LspItem, filter: KindFilter) {
   }
   return item.msgKind === filter
 }
+
+(window as any).appendLog = (log) => {
+  store.commit('appendLog', log)
+}
+
+window.addEventListener('message', ev => {
+  store.commit('appendLog', ev.data)
+  const el = document.querySelector('.msg:last-child')
+  el.scrollIntoView({ block: 'start', behavior: 'smooth' })
+})
+
+export default store
