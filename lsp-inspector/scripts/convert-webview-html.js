@@ -3,19 +3,13 @@
 const fs = require('fs')
 const path = require('path')
 
-const htmlPath = path.resolve(__dirname, '../../lsp-inspector-webview/dist/index.html')
+const htmlPath = path.resolve(__dirname, '../dist/index.html')
 const content = fs.readFileSync(htmlPath, 'utf-8')
 
 const beforeHeadClose = `
-<link rel="stylesheet" href="{{ "/css/bootswatch/cosmo/bootstrap.min.css" | prepend: site.baseurl }}">
-<link rel="stylesheet" href="{{ "/css/fontawesome-all.min.css" | prepend: site.baseurl }}">
-<link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
-<link rel="shortcut icon" href="{{ "/img/favicon.png" | prepend: site.baseurl }}">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; font-src vscode-resource: https:; img-src vscode-resource: https:; script-src vscode-resource: 'unsafe-inline'; style-src * vscode-resource: 'unsafe-inline';">
 `
 
-const final = content
-  .replace('<!DOCTYPE html>', '---\n---\n\n<!DOCTYPE html>')
-  .replace('</head>', `${beforeHeadClose}</head>`)
-  .replace('<body>', '<body>\n{% include topnav.html %}\n')
+const final = content.replace('</head>', `${beforeHeadClose}</head>`)
 
 fs.writeFileSync(htmlPath, final)

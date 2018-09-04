@@ -1,3 +1,4 @@
+import * as fs from 'fs'
 import * as path from 'path'
 import * as vscode from 'vscode'
 import { Server } from 'ws'
@@ -21,7 +22,7 @@ class LSPInspector {
   private _wsserver: Server
 
   constructor(extensionPath: string) {
-    this._resourceRoot = path.join(extensionPath, 'webview')
+    this._resourceRoot = path.join(extensionPath, 'dist/webview')
     this._panel = vscode.window.createWebviewPanel(LSPInspector.viewType, 'LSP Inspector', 2, {
       enableScripts: true,
       enableFindWidget: true,
@@ -44,38 +45,13 @@ class LSPInspector {
   }
 
   private _setHTMLContent() {
-    this._panel.webview.html = `
-        <!DOCTYPE html>
-        <html>
-        
-        <head>
-          <meta charset=utf-8>
-          <meta http-equiv=X-UA-Compatible content="IE=edge">
-          <meta name=viewport content="width=device-width,initial-scale=1">
+    const htmlContentPath = path.resolve(this._resourceRoot, 'index.html')
+    const htmlContent = fs.readFileSync(htmlContentPath, 'utf-8')
+      .replace(/(href|src)=([^> ]*)/g, (_, attr, resourcePath) => {
+        return `${attr}=${this.getResourceUri(resourcePath)}`
+      })
 
-          <style>
-            html, body {
-              background: white;
-            }
-          </style>
-          <link href=${this.getResourceUri('css/app.css')} rel=stylesheet>
-          <link href=${this.getResourceUri('css/chunk-vendors.css')} rel=stylesheet>
-
-          <meta http-equiv="Content-Security-Policy" content="default-src 'none'; font-src vscode-resource: https:; img-src vscode-resource: https:; script-src vscode-resource:; style-src * vscode-resource: 'unsafe-inline';">
-          <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-          <title>LSP Inspector</title>
-        </head>
-        
-        <body>
-          <div id=app></div>
-          <script src="${this.getResourceUri('js/chunk-vendors.js')}"></script>
-          <script src="${this.getResourceUri('js/app.js')}"></script>
-          <script src="${this.getResourceUri('js/vscode.js')}"></script>
-        </body>
-        
-        </html>
-        `
+    this._panel.webview.html = htmlContent
   }
 
   private getResourceUri(p: string) {

@@ -13,7 +13,7 @@
     "onCommand:lspInspector.start",
     "onWebviewPanel:lspInspector"
   ],
-  "main": "./dist/src/extension",
+  "main": "./dist/extension",
   "contributes": {
     "commands": [{
       "command": "lspInspector.start",

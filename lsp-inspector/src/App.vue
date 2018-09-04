@@ -38,6 +38,10 @@ export default Vue.extend({
 <style lang="scss">
 @import '@/scss/global.scss';
 
+#app {
+  background: white;
+}
+
 h1, h2, h3, h4 {
   font-weight: 500;
 }

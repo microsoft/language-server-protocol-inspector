@@ -5,7 +5,7 @@
     "outDir": "dist",
     "lib": ["es6", "dom"],
     "sourceMap": true,
-    "rootDir": ".",
+    "rootDir": "./src",
     "strict": true,
     // For https://github.com/cypress-io/cypress/issues/1087
     "skipLibCheck": true

@@ -4,7 +4,7 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build:lsp-website": "TARGET=lsp-website vue-cli-service build && node scripts/convert-lsp-website-html.js",
-    "build:webview": "TARGET=webview vue-cli-service build",
+    "build:webview": "TARGET=webview vue-cli-service build && node scripts/convert-webview-html.js && node scripts/copy-dist-to-webview.js",
     "lint": "vue-cli-service lint",
     "test": "vue-cli-service test:unit",
     "test:e2e": "vue-cli-service test:e2e",
