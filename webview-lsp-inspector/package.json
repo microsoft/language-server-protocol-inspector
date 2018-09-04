@@ -1,0 +1,49 @@
+{
+  "name": "webview-lsp-inspector",
+  "description": "LSP Inspector",
+  "version": "0.0.1",
+  "publisher": "octref",
+  "engines": {
+    "vscode": "^1.25.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:lspInspector.start",
+    "onWebviewPanel:lspInspector"
+  ],
+  "main": "./dist/src/extension",
+  "contributes": {
+    "commands": [{
+      "command": "lspInspector.start",
+      "title": "Start LSP Inspector",
+      "category": "LSP Inspector"
+    }],
+    "configuration": [{
+      "title": "LSP Inspector Config",
+      "properties": {
+        "lspInspector.port": {
+          "type": "number",
+          "default": "7000",
+          "description": "The port on which the websocket server listens to"
+        }
+      }
+    }]
+  },
+  "scripts": {
+    "vscode:prepublish": "tsc -p ./",
+    "compile": "tsc -p ./",
+    "watch": "tsc -w -p ./",
+    "postinstall": "node ./node_modules/vscode/bin/install"
+  },
+  "dependencies": {
+    "vscode": "1.1.18",
+    "ws": "^6.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^10.5.2",
+    "@types/ws": "^6.0.0",
+    "typescript": "^2.9.2"
+  }
+}
