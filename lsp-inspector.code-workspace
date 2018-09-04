@@ -1,14 +1,13 @@
 {
-"folders": [
-	{
-		"path": "."
-	},
-	{
-		"path": "lsp-inspector"
-	},
-	{
-		"path": "webview-lsp-inspector"
-	}
-],
+  "folders": [{
+      "path": "."
+    },
+    {
+      "path": "lsp-inspector"
+    },
+    {
+      "path": "lsp-inspector-webview"
+    }
+  ],
   "settings": {}
 }

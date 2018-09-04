@@ -3,7 +3,7 @@
 const fs = require('fs')
 const path = require('path')
 
-const htmlPath = path.resolve(__dirname, '../dist/index.html')
+const htmlPath = path.resolve(__dirname, '../../lsp-inspector-webview/dist/index.html')
 const content = fs.readFileSync(htmlPath, 'utf-8')
 
 const beforeHeadClose = `

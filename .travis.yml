@@ -5,7 +5,7 @@ cache: yarn
 
 install:
   - cd lsp-inspector && yarn && cd ..
-  - cd webview-lsp-inspector && yarn && cd ..
+  - cd lsp-inspector-webview && yarn && cd ..
 
 script:
   - cd lsp-inspector && yarn test && cd ..
