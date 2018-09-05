@@ -2,7 +2,7 @@
   "name": "lsp-inspector-webview",
   "preview": true,
   "description": "LSP Inspector Webview",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "publisher": "octref",
   "repository": {
     "type" : "git",
