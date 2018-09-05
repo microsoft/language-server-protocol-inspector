@@ -1,0 +1,45 @@
+{
+  "name": "lsp-inspector",
+  "version": "0.1.0",
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build:lsp-website": "TARGET=lsp-website vue-cli-service build && node scripts/convert-lsp-website-html.js",
+    "build:webview": "TARGET=webview vue-cli-service build && node scripts/convert-webview-html.js && node scripts/copy-dist-to-webview.js",
+    "lint": "vue-cli-service lint",
+    "test": "vue-cli-service test:unit",
+    "test:e2e": "vue-cli-service test:e2e",
+    "format": "prettier --config .prettierrc --write {src,tests}/**/*.{vue,js,ts,json}"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome": "^1.1.8",
+    "@fortawesome/fontawesome-free-solid": "^5.0.13",
+    "@fortawesome/vue-fontawesome": "^0.0.23",
+    "highlight.js": "^9.12.0",
+    "normalize.css": "^8.0.0",
+    "vue": "^2.5.16",
+    "vue-router": "^3.0.1",
+    "vuex": "^3.0.1"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^5.0.3",
+    "@types/jest": "^22.0.1",
+    "@vue/cli-plugin-e2e-cypress": "^3.0.0-beta.15",
+    "@vue/cli-plugin-typescript": "^3.0.0-beta.15",
+    "@vue/cli-plugin-unit-jest": "^3.0.0-beta.15",
+    "@vue/cli-service": "^3.0.0-beta.15",
+    "@vue/test-utils": "^1.0.0-beta.16",
+    "fs-extra": "^6.0.1",
+    "lerna": "^2.11.0",
+    "node-sass": "^4.9.0",
+    "prettier": "^1.13.6",
+    "sass-loader": "^7.0.1",
+    "ts-jest": "^22.4.6",
+    "typescript": "^3.0.1",
+    "vue-template-compiler": "^2.5.16"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ]
+}

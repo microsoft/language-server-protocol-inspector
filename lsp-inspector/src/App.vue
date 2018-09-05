@@ -38,6 +38,10 @@ export default Vue.extend({
 <style lang="scss">
 @import '@/scss/global.scss';
 
+#app {
+  background: white;
+}
+
 h1, h2, h3, h4 {
   font-weight: 500;
 }
@@ -51,15 +55,14 @@ h1, h2, h3, h4 {
 }
 
 .inspector {
-  margin-top: 10px;
+  max-height: 100vh;
+  padding-top: 10px;
+  padding-bottom: 30px;
 }
 .body {
   justify-content: center;
   display: flex;
   max-width: 1100px;
-
-  margin-top: 20px;
-  margin-bottom: 60px;
 
   margin-left: auto;
   margin-right: auto;

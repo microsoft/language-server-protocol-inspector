@@ -41,19 +41,18 @@ export default Vue.extend({
   margin-right: auto;
 }
 .msg-header {
+  height: 60px;
   display: flex;
   flex-flow: row;
   justify-content: space-between;
-  margin-bottom: 40px;
   font-size: 2rem;
 }
 .msg-list {
   display: flex;
   flex-flow: column;
-  height: calc(100vh - 300px);
-  padding-top: 20px;
+  height: calc(100vh - 200px);
+  margin-top: 20px;
   overflow: scroll;
   border-top: 2px solid $active-bg;
-  border-bottom: 2px solid $active-bg;
 }
 </style>

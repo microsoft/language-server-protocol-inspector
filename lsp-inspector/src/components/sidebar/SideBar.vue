@@ -34,5 +34,7 @@ h3 {
   margin-right: 50px;
   text-align: left;
   font-size: 14px;
+  height: calc(100vh - 120px);
+  overflow-y: scroll;
 }
 </style>
