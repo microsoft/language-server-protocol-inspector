@@ -35,9 +35,9 @@ a {
 }
 
 .header {
+  height: 60px;
   max-width: 1100px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto 25px auto;
   display: flex;
   flex-flow: row;
   justify-content: space-between;
