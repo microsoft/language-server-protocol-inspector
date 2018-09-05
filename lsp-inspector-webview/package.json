@@ -1,5 +1,6 @@
 {
   "name": "lsp-inspector-webview",
+  "preview": true,
   "description": "LSP Inspector Webview",
   "version": "0.0.1",
   "publisher": "octref",
