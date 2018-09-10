@@ -2,6 +2,8 @@
 
 This is a Webview extension based on the `/lsp-inspector` Vue app. It has an additional WebSocket server to allow any incoming connection to stream and visualize LSP logs.
 
+You can download it at https://marketplace.visualstudio.com/items?itemName=octref.lsp-inspector-webview.
+
 ## Usage
 
 - Run command "LSP Inspector: Start LSP Inspector".
