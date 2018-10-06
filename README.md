@@ -69,7 +69,7 @@ Here is a sample:
 ```
 
 ## Running & Developing
-
+Navigate to the sub-folder `lsp-inspector`, and:
 - `yarn`
 - `yarn serve`
 
