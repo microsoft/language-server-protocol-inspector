@@ -1,0 +1,48 @@
+[
+  {
+    "time": "15:31:35",
+    "msg": "Received request 'window/showStatus - (90261e77-782b-4ac1-bd52-6abfA0f65A15)'.",
+    "msgId": "90261e77-782b-4ac1-bd52-6abfA0f65A15",
+    "msgKind": "recv-request",
+    "msgType": "window/showStatus",
+    "arg": {
+      "value": "Loading project...",
+      "enable": true
+    }
+  },
+  {
+    "time": "15:31:35",
+    "msg": "Sending response 'window/showStatus - (90261e77-782b-4ac1-bd52-6abfA0f65A15)' took 25ms",
+    "msgId": "90261e77-782b-4ac1-bd52-6abfA0f65A15",
+    "msgKind": "send-response",
+    "msgLatency": "25ms",
+    "msgType": "window/showStatus",
+    "arg": {
+      "value": "",
+      "enable": true
+    }
+  },
+  {
+    "time": "15:31:35",
+    "msg": "Sending request 'window/showStatus - (90261e77-782b-4ac1-bd52-6abfA0f65A15)'.",
+    "msgId": "90261e77-782b-4ac1-bd52-6abfA0f65A15",
+    "msgKind": "send-request",
+    "msgType": "window/showStatus",
+    "arg": {
+      "value": "Loading project...",
+      "enable": true
+    }
+  },
+  {
+    "time": "15:31:35",
+    "msg": "Received response 'window/showStatus - (90261e77-782b-4ac1-bd52-6abfA0f65A15)' in 25ms",
+    "msgId": "90261e77-782b-4ac1-bd52-6abfA0f65A15",
+    "msgKind": "recv-response",
+    "msgLatency": "25ms",
+    "msgType": "window/showStatus",
+    "arg": {
+      "value": "",
+      "enable": true
+    }
+  }
+]
