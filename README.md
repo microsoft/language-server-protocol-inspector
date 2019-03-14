@@ -4,7 +4,7 @@
 
 <p align="center">
   <a href="https://travis-ci.org/Microsoft/language-server-protocol-inspector">
-    <img src="https://img.shields.io/travis-ci/Microsoft/language-server-protocol-inspector.svg?style=flat-square">
+    <img src="https://img.shields.io/travis/Microsoft/language-server-protocol-inspector.svg?style=flat-square">
   </a>
 </p>
 
