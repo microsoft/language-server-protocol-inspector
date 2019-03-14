@@ -1,0 +1,28 @@
+[Trace - 15:31:35] Received request 'window/showStatus - (90261e77-782b-4ac1-bd52-6abfA0f65A15)'.
+Params: {
+    "value": "Loading project...",
+    "enable": true
+}
+
+
+[Trace - 15:31:35] Sending response 'window/showStatus - (90261e77-782b-4ac1-bd52-6abfA0f65A15)' took 25ms
+Params: {
+    "value": "",
+    "enable": true
+}
+
+
+[Trace - 15:31:35] Sending request 'window/showStatus - (90261e77-782b-4ac1-bd52-6abfA0f65A15)'.
+Params: {
+    "value": "Loading project...",
+    "enable": true
+}
+
+
+[Trace - 15:31:35] Received response 'window/showStatus - (90261e77-782b-4ac1-bd52-6abfA0f65A15)' in 25ms
+Params: {
+    "value": "",
+    "enable": true
+}
+
+

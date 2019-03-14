@@ -83,10 +83,10 @@ function extractMsg(msg: string) {
 
   const reSendNotification = /Sending notification '(.*)'/
   const reRecvNotification = /Received notification '(.*)'/
-  const reSendRequest = /Sending request '(.*) - \((\d+)\)'/
-  const reRecvRequest = /Received request '(.*) - \((\d+)\)'/
-  const reSendResponse = /Sending response '(.*) - \((\d+)\)'.*took (\d+ms)/
-  const reRecvResponse = /Received response '(.*) - \((\d+)\)' in (\d+ms)/
+  const reSendRequest = /Sending request '(.*) - \(([0-9a-zA-Z-]+)\)'/
+  const reRecvRequest = /Received request '(.*) - \(([0-9a-zA-Z-]+)\)'/
+  const reSendResponse = /Sending response '(.*) - \(([0-9a-zA-Z-]+)\)'.*took (\d+ms)/
+  const reRecvResponse = /Received response '(.*) - \(([0-9a-zA-Z-]+)\)' in (\d+ms)/
 
   let msgType, msgId, msgLatency
   /* tslint:disable */
