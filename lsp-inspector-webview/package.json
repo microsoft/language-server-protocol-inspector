@@ -30,7 +30,7 @@
       "properties": {
         "lspInspector.port": {
           "type": "number",
-          "default": "7000",
+          "default": 7000,
           "description": "The port on which the websocket server listens to"
         }
       }
