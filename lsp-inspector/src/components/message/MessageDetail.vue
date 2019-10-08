@@ -20,7 +20,7 @@ export default Vue.extend({
   computed: {
     msgLink() {
       const hash = this.item.msgType.split('/').join('_')
-      return `https://microsoft.github.io/language-server-protocol/specification#${
+      return `https://microsoft.github.io/language-server-protocol/specifications/specification-3-14/#${
         hash
       }`
     }
