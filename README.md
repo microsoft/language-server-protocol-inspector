@@ -8,7 +8,8 @@
   </a>
 </p>
 
-Try it at https://microsoft.github.io/language-server-protocol/inspector/.
+**⚠️The repository got archived since we don't serve the inspector on the Language Server Protocol website anymore⚠️**
+
 
 ## Motivation
 
