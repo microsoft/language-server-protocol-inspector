@@ -7,7 +7,7 @@ const OUTPUT_DIR = process.env.TARGET === 'lsp-website'
   : '../lsp-inspector-webview/dist/src'
 
 module.exports = {
-  baseUrl: BASEURL,
+  publicPath: BASEURL,
   devServer: {
     overlay: false
   },
