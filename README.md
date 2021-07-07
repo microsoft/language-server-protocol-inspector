@@ -31,6 +31,7 @@ This inspector visualizes the logs to make it easy to understand the communicati
   - Copy everything inside `CSS Language Server` channel into a log file `css.log`.
   - Load it from the web app.
 - You can try it on real-world logs file at `/tests/unit/logParser/fixture`.
+- When using the VS Code plugin, it is possible to stream the logs directly from the language server or client to the LSP Inspector. For an example how to do this, see <https://github.com/microsoft/vscode-extension-samples/tree/master/lsp-log-streaming-sample>.
 
 ## Log Format
 
@@ -68,6 +69,13 @@ Here is a sample:
 {"type":"receive-response","message":{"jsonrpc":"2.0","id":0,"result":{"capabilities":{"textDocumentSync":1,"completionProvider":{"resolveProvider":true}}}},"timestamp":1534721620392}\r\n
 {"type":"send-notification","message":{"jsonrpc":"2.0","method":"initialized","params":{}},"timestamp":1534721620393}\r\n
 ```
+### Streaming
+
+When streaming logs into the LSP inspector using WebSocket, there apply some special constraints:
+
+* Only the JSON log format is supported. 
+* Every message is prefixed with a header like `[LSP   - 10:42:13 PM]`. The content of that header isn't really important, the only thing that matters is that the header is _exacly 21 bytes_ long.
+* Each JSONRPC message has to be sent in a separate Web Socket message. 
 
 ## Running & Developing
 Navigate to the sub-folder `lsp-inspector`, and:
